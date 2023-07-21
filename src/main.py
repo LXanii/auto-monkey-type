@@ -32,7 +32,7 @@ def get_words():
 
 def main():
     turn_gray('test.png', True)
-    pyautogui.typewrite(get_words(), interval=0.02)
+    pyautogui.typewrite(get_words(), interval=0.03)
 
 time.sleep(2)
 while True:
@@ -44,7 +44,7 @@ while True:
         pyautogui.screenshot('test.png', region=(365, 550, 1190, 118))
         pyautogui.click(929, 555)
         turn_gray('test.png', False)
-        pyautogui.typewrite(get_words(), interval=0.02)
+        pyautogui.typewrite(get_words(), interval=0.025)
         if pyautogui.locateOnScreen('char.png', confidence=0.65) != None:
             break
     print("\nStarting New Game\n")
